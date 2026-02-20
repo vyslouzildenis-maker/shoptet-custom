@@ -1,0 +1,169 @@
+/*
+ * ============================================================
+ *  SHOPTET CUSTOM CSS – ORANŽOVÁ + ZAOBLENÁ TLAČÍTKA
+ *  GitHub: https://github.com/vyslouzildenis-maker/shoptet-custom
+ *
+ *  Vložit do Shoptet admin → Vzhled → vlastní kód v <head>:
+ *  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vyslouzildenis-maker/shoptet-custom@main/custom.css">
+ * ============================================================
+ */
+
+
+/* ============================================================
+   1. GLOBÁLNÍ BARVA – CSS proměnné (nejvyšší priorita)
+   ============================================================ */
+
+:root {
+    --color-primary:           #f97316;
+    --color-primary-hover:     #ea6c0a;
+    --colors-forms-activated:  #f97316;
+}
+
+
+/* ============================================================
+   2. VŠECHNA TLAČÍTKA – zaoblená
+   ============================================================ */
+
+.btn,
+.btn-primary,
+.btn-default,
+.btn-success,
+button[type="submit"],
+input[type="submit"],
+.buyBtn,
+.p-add-to-cart,
+a.btn {
+    border-radius: 50px !important;
+}
+
+/* Primární tlačítka – oranžová */
+.btn-primary,
+.buyBtn,
+.p-add-to-cart,
+button[type="submit"],
+input[type="submit"] {
+    background-color: #f97316 !important;
+    border-color:     #f97316 !important;
+    color: #fff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.buyBtn:hover,
+.p-add-to-cart:hover,
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+    background-color: #ea6c0a !important;
+    border-color:     #ea6c0a !important;
+    color: #fff !important;
+}
+
+
+/* ============================================================
+   3. ODKAZY
+   ============================================================ */
+
+a {
+    color: #f97316;
+}
+
+a:hover,
+a:focus {
+    color: #ea6c0a;
+}
+
+
+/* ============================================================
+   4. NAVIGACE – hover a aktivní stav
+   ============================================================ */
+
+.navigation-in > ul > li > a:hover,
+.navigation-in > ul > li.active > a {
+    color: #f97316 !important;
+}
+
+
+/* ============================================================
+   5. KOŠÍK – počítadlo
+   ============================================================ */
+
+.cart-count,
+.cart-count-number {
+    background-color: #f97316 !important;
+    border-color:     #f97316 !important;
+}
+
+
+/* ============================================================
+   6. PRODUKTOVÉ KARTY
+   ============================================================ */
+
+.price-final,
+.product-detail__price .price,
+.product__price .price {
+    color: #f97316;
+}
+
+.product-flags .flag,
+.label-sale,
+.label-new {
+    background-color: #f97316 !important;
+}
+
+.product:hover .product__title a {
+    color: #f97316;
+}
+
+
+/* ============================================================
+   7. FORMULÁŘE – focus
+   ============================================================ */
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #f97316 !important;
+    box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.2) !important;
+    outline: none !important;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    accent-color: #f97316;
+}
+
+
+/* ============================================================
+   8. STRÁNKOVÁNÍ
+   ============================================================ */
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > li > a:hover {
+    background-color: #f97316 !important;
+    border-color:     #f97316 !important;
+    color: #fff !important;
+}
+
+
+/* ============================================================
+   9. CENOVÝ SLIDER (filtr v kategorii)
+   ============================================================ */
+
+.ui-slider-range {
+    background-color: #f97316 !important;
+}
+
+.ui-slider-handle {
+    border-color: #f97316 !important;
+}
+
+
+/* ============================================================
+   10. SELECT2 – dropdown výběry
+   ============================================================ */
+
+.select2-container--default
+.select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: #f97316;
+}
