@@ -1,140 +1,202 @@
 /*
- * ============================================================
- *  SHOPTET CUSTOM CSS – ORANŽOVÁ + ZAOBLENÁ TLAČÍTKA
- *  GitHub: https://github.com/vyslouzildenis-maker/shoptet-custom
- *
- *  Vložit do Shoptet admin → Vzhled → vlastní kód v <head>:
- *  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vyslouzildenis-maker/shoptet-custom@main/custom.css">
- * ============================================================
+ * SHOPTET CUSTOM CSS – ORANŽOVÁ + ZAOBLENÁ TLAČÍTKA
+ * GitHub: https://github.com/vyslouzildenis-maker/shoptet-custom
  */
 
-
 /* ============================================================
-   1. GLOBÁLNÍ BARVA – CSS proměnné (nejvyšší priorita)
+   PŘEPIS CSS PROMĚNNÝCH – musí být za Shoptet inline stylem
+   Proto je vložen přes externí CSS který se načítá POSLEDNÍ
    ============================================================ */
 
 :root {
-    --color-primary:           #f97316;
-    --color-primary-hover:     #ea6c0a;
-    --colors-forms-activated:  #f97316;
+    --color-primary:        #f97316 !important;
+    --color-primary-hover:  #ea6c0a !important;
+    --color-secondary:      #f97316 !important;
+    --color-secondary-hover:#ea6c0a !important;
+    --color-tertiary:       #f97316 !important;
+    --color-tertiary-hover: #ea6c0a !important;
 }
 
-
 /* ============================================================
-   2. VŠECHNA TLAČÍTKA – zaoblená
+   NAVIGAČNÍ LIŠTA (modrá → oranžová)
+   Třída: .navigation-in
    ============================================================ */
 
-.btn,
-.btn-primary,
-.btn-default,
-.btn-success,
-button[type="submit"],
-input[type="submit"],
-.buyBtn,
-.p-add-to-cart,
-a.btn {
+.navigation-in {
+    background-color: #f97316 !important;
+}
+
+.navigation-in > ul > li > a,
+.navigation-in > ul > li > a b {
+    color: #fff !important;
+}
+
+.navigation-in > ul > li > a:hover,
+.navigation-in > ul > li.open > a {
+    background-color: #ea6c0a !important;
+    color: #fff !important;
+}
+
+/* ============================================================
+   TLAČÍTKO "HLEDAT"
+   Třída: .btn.btn-default (ve vyhledávacím formuláři)
+   ============================================================ */
+
+.search-form .btn-default,
+.search .btn-default {
+    background-color: #f97316 !important;
+    border-color:     #f97316 !important;
+    color: #fff !important;
     border-radius: 50px !important;
 }
 
-/* Primární tlačítka – oranžová */
-.btn-primary,
-.buyBtn,
-.p-add-to-cart,
-button[type="submit"],
-input[type="submit"] {
+.search-form .btn-default:hover,
+.search .btn-default:hover {
+    background-color: #ea6c0a !important;
+    border-color:     #ea6c0a !important;
+}
+
+/* ============================================================
+   TLAČÍTKO "DO KOŠÍKU"
+   Třída: .btn.btn-cart.add-to-cart-button
+   ============================================================ */
+
+.btn-cart,
+.add-to-cart-button {
     background-color: #f97316 !important;
     border-color:     #f97316 !important;
     color: #fff !important;
+    border-radius: 50px !important;
 }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.buyBtn:hover,
-.p-add-to-cart:hover,
-button[type="submit"]:hover,
-input[type="submit"]:hover {
+.btn-cart:hover,
+.add-to-cart-button:hover {
     background-color: #ea6c0a !important;
     border-color:     #ea6c0a !important;
-    color: #fff !important;
 }
 
+/* ============================================================
+   TLAČÍTKO "POKRAČOVAT DO KOŠÍKU"
+   Třída: .btn.btn-conversion
+   ============================================================ */
+
+.btn-conversion {
+    background-color: #f97316 !important;
+    border-color:     #f97316 !important;
+    color: #fff !important;
+    border-radius: 50px !important;
+}
+
+.btn-conversion:hover {
+    background-color: #ea6c0a !important;
+    border-color:     #ea6c0a !important;
+}
 
 /* ============================================================
-   3. ODKAZY
+   TLAČÍTKO "PŘIHLÁSIT SE"
+   Třída: .btn.btn-secondary.btn-login
+   ============================================================ */
+
+.btn-secondary,
+.btn-login {
+    background-color: #f97316 !important;
+    border-color:     #f97316 !important;
+    color: #fff !important;
+    border-radius: 50px !important;
+}
+
+.btn-secondary:hover,
+.btn-login:hover {
+    background-color: #ea6c0a !important;
+    border-color:     #ea6c0a !important;
+}
+
+/* ============================================================
+   VŠECHNA OSTATNÍ TLAČÍTKA – zaoblení
+   ============================================================ */
+
+.btn {
+    border-radius: 50px !important;
+}
+
+/* ============================================================
+   TLAČÍTKO "PŘIHLÁŠENÍ" v top navigation
+   Třída: .top-nav-button.top-nav-button-login
+   ============================================================ */
+
+.top-nav-button-login {
+    background-color: #f97316 !important;
+    border-color:     #f97316 !important;
+    color: #fff !important;
+    border-radius: 50px !important;
+}
+
+/* ============================================================
+   ODKAZY
    ============================================================ */
 
 a {
-    color: #f97316;
-}
-
-a:hover,
-a:focus {
-    color: #ea6c0a;
-}
-
-
-/* ============================================================
-   4. NAVIGACE – hover a aktivní stav
-   ============================================================ */
-
-.navigation-in > ul > li > a:hover,
-.navigation-in > ul > li.active > a {
     color: #f97316 !important;
 }
 
+a:hover, a:focus {
+    color: #ea6c0a !important;
+}
+
+/* Výjimky – bílý text v navigaci a tlačítkách */
+.navigation-in a,
+.btn a,
+a.btn,
+.btn-cart,
+.btn-conversion,
+.btn-secondary,
+.btn-primary,
+.add-to-cart-button,
+#footer a,
+.admin-bar a,
+.top-navigation-bar a,
+.top-navigation-bar .top-navigation-contacts a {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+.top-navigation-bar a:hover {
+    color: #f97316 !important;
+}
 
 /* ============================================================
-   5. KOŠÍK – počítadlo
+   CENY PRODUKTŮ
    ============================================================ */
 
-.cart-count,
-.cart-count-number {
-    background-color: #f97316 !important;
-    border-color:     #f97316 !important;
+.price-final strong,
+.price.price-final {
+    color: #f97316 !important;
 }
 
-
 /* ============================================================
-   6. PRODUKTOVÉ KARTY
+   ŠTÍTKY – Tip, Novinka, Akce
    ============================================================ */
 
-.price-final,
-.product-detail__price .price,
-.product__price .price {
-    color: #f97316;
-}
-
-.product-flags .flag,
-.label-sale,
-.label-new {
+.flag-tip,
+.flag-new,
+.flag-action {
     background-color: #f97316 !important;
 }
 
-.product:hover .product__title a {
-    color: #f97316;
-}
-
-
 /* ============================================================
-   7. FORMULÁŘE – focus
+   FORMULÁŘE – focus
    ============================================================ */
 
 input:focus,
 textarea:focus,
 select:focus {
     border-color: #f97316 !important;
-    box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.2) !important;
+    box-shadow: 0 0 0 2px rgba(249,115,22,0.2) !important;
     outline: none !important;
 }
 
-input[type="checkbox"]:checked,
-input[type="radio"]:checked {
-    accent-color: #f97316;
-}
-
-
 /* ============================================================
-   8. STRÁNKOVÁNÍ
+   STRÁNKOVÁNÍ
    ============================================================ */
 
 .pagination > .active > a,
@@ -145,9 +207,8 @@ input[type="radio"]:checked {
     color: #fff !important;
 }
 
-
 /* ============================================================
-   9. CENOVÝ SLIDER (filtr v kategorii)
+   CENOVÝ SLIDER
    ============================================================ */
 
 .ui-slider-range {
@@ -156,14 +217,4 @@ input[type="radio"]:checked {
 
 .ui-slider-handle {
     border-color: #f97316 !important;
-}
-
-
-/* ============================================================
-   10. SELECT2 – dropdown výběry
-   ============================================================ */
-
-.select2-container--default
-.select2-results__option--highlighted.select2-results__option--selectable {
-    background-color: #f97316;
 }
